@@ -14,7 +14,6 @@ import java.util.Scanner;
 
 
             public int compareMoves(Move otherMove) {
-                // Ничья
                 if (this == otherMove)
                     return 0;
 
@@ -40,15 +39,12 @@ import java.util.Scanner;
             }
 
             public Move getMove() {
-                // Выведем запрос на ввод
                 System.out.print("камень, ножницы или бумага? ");
 
-                // Прочитаем ввод пользователя
                 String userInput = inputScanner.nextLine();
                 userInput = userInput.toUpperCase();
                 char firstLetter = userInput.charAt(0);
                 if (firstLetter == 'К' || firstLetter == 'Н' || firstLetter == 'Б') {
-                    // Ввод корректный
                     switch (firstLetter) {
                         case 'К':
                             return Move.k;
